@@ -11,12 +11,14 @@ function onStartClick() {
 	timerId = setInterval(() => {
 		document.body.style.backgroundColor = getRandomHexColor();
 	}, 1000);
+
 	startBtn.setAttribute('disabled', true);
 	stopBtn.removeAttribute('disabled');
 }
 
 function onStopClick() {
 	clearInterval(timerId);
+	
 	startBtn.removeAttribute('disabled');
 	stopBtn.setAttribute('disabled', true);
 }
