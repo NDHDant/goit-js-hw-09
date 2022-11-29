@@ -37,11 +37,12 @@ function onClick() {
 		let timerInMs = new Date(input.value) - new Date;
 		let objectTimer = convertMs(timerInMs);
 
-		timerDays.textContent = objectTimer.days.toString().padStart(2, '0');
-		timerHours.textContent = objectTimer.hours.toString().padStart(2, '0');
-		timerMinutes.textContent = objectTimer.minutes.toString().padStart(2, '0');
-		timesSeconds.textContent = objectTimer.seconds.toString().padStart(2, '0');
-
+		if (timerInMs > 0) {
+			timerDays.textContent = objectTimer.days.toString().padStart(2, '0');
+			timerHours.textContent = objectTimer.hours.toString().padStart(2, '0');
+			timerMinutes.textContent = objectTimer.minutes.toString().padStart(2, '0');
+			timesSeconds.textContent = objectTimer.seconds.toString().padStart(2, '0');
+		};
 	}, 1000)
 	
 }
